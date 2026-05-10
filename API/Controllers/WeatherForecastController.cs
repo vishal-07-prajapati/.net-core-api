@@ -1,3 +1,5 @@
+using API.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -21,6 +23,12 @@ namespace API.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [Authorize]
+        [HttpGet("Test")]
+        public IActionResult Test1()
+        {
+            return Ok(new { Message = "Test" });
         }
     }
 }
