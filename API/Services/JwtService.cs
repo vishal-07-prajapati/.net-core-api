@@ -4,10 +4,10 @@ using API.Repositories;
 
 namespace API.Services
 {
-    public class JwtService
+    public class JwtService : IJwtService
     {
-        private readonly IJwt _jwt;
-        public JwtService(IJwt jwt)
+        private readonly IJwtRepository _jwt;
+        public JwtService(IJwtRepository jwt)
         {
             _jwt = jwt;
         }

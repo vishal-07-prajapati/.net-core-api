@@ -7,7 +7,7 @@ using System.Text;
 
 namespace API.Repositories
 {
-    public class JwtRepository : IJwt
+    public class JwtRepository : IJwtRepository
     {
         private readonly IConfiguration _configuration;
 

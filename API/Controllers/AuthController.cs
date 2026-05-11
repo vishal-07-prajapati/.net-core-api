@@ -10,9 +10,9 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
-        private readonly IJwt _jwt;
-        private readonly IAuth _auth;
-        public AuthController(IJwt jwt, IAuth auth) 
+        private readonly IJwtService _jwt;
+        private readonly IAuthService _auth;
+        public AuthController(IJwtService jwt, IAuthService auth) 
         {
             _jwt = jwt;
             _auth = auth;

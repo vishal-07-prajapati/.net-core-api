@@ -1,7 +1,8 @@
 ﻿using API.DTO;
+
 namespace API.Interface
 {
-    public interface IJwt
+    public interface IJwtService
     {
         string GenerateToken(AuthDTO user);
     }

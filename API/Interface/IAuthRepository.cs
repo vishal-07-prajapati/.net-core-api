@@ -3,7 +3,7 @@ using API.Models;
 
 namespace API.Interface
 {
-    public interface IAuth
+    public interface IAuthRepository
     {
         public SuccessModel GetUser(AuthDTO user);
     }

@@ -5,10 +5,10 @@ using API.Repositories;
 
 namespace API.Services
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
-        private readonly IAuth _auth;
-        public AuthService(IAuth auth) 
+        private readonly IAuthRepository _auth;
+        public AuthService(IAuthRepository auth) 
         {
             _auth = auth;
         }

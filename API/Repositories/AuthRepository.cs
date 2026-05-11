@@ -5,7 +5,7 @@ using API.Utilities;
 
 namespace API.Repositories
 {
-    public class AuthRepository : IAuth
+    public class AuthRepository : IAuthRepository
     {
         private static List<AuthDTO> listUsers = new List<AuthDTO>()
         {
