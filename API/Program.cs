@@ -1,4 +1,5 @@
 using API.Interface;
+using API.Middleware;
 using API.Repositories;
 using API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -65,6 +66,9 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseCors();
+
+app.UseMiddleware<ExceptionMiddleware>();
+
 app.MapControllers();
 
 app.Run();

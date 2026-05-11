@@ -44,5 +44,11 @@ namespace API.Controllers
             
             return successModel.Success ? Ok(successModel) : Unauthorized(successModel);
         }
+
+        [HttpGet("test-error")]
+        public IActionResult TestError() 
+        {
+            throw new Exception("This is a test exception!");
+        }
     }
 }
